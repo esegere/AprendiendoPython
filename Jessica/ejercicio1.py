@@ -24,7 +24,7 @@ def main():
     comilla_simple_doble = 'Te amo bebe "Sergio"'
     comilla_doble_simple = "Eres el mejor 'mi vida'"
 
-    print(yo_te_amo)
+    print(f'variable booleana {yo_te_amo}')
 
 
 if __name__ == "__main__":
