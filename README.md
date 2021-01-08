@@ -2,6 +2,7 @@
 repositorio para precticas de python basico y colaboracion con git
 
 ## temas vistos
+- tipos de datos
 
 ## temas documentados
 - tipos de datos
