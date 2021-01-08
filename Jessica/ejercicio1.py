@@ -1,13 +1,13 @@
 def main():
 # crear una variable de cada tipo e imprimir su valor
     #booleanos
-    yo_te_amo = True
-    yo_no_te_amo = False
+    verdad = True
+    mentira = False
 
     #Entero positivo y negativo
     inicio_amor = 100
     limite_de_amor = -100
-    cuanto_te_amo = 1_000_000_000_000_000_000
+    cantidad = 1_000_000_000_000_000_000
 
     #cosas raras que ya se me olvidaron
     bin = 0b11
@@ -19,12 +19,13 @@ def main():
     notacion_cientifica = 54e-20
 
     #string
-    comilla_simple = 'Te amo Sergio'
-    comilla_doble = "Te amo x3"
-    comilla_simple_doble = 'Te amo bebe "Sergio"'
-    comilla_doble_simple = "Eres el mejor 'mi vida'"
+    mensaje = f'''Hola bebe, Te amo. Tengo un mensaje para ti
+    Nunca dudes que te amo porque siempre sera {verdad}
+    En ningun momento de nuestras vidas el resultado sera {mentira}
+    la cantidad en la que puedes medir mi amor es mayor a este numero: {cantidad}
+    '''
 
-    print(f'variable booleana {yo_te_amo}')
+    print(mensaje)
 
 
 if __name__ == "__main__":
