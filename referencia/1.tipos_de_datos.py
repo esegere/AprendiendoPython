@@ -64,3 +64,4 @@ float: {float_scientific}
 otras strings: {string_simple}
 y mas...
 '''
+print(string_f)

@@ -98,3 +98,4 @@ tuple3 = (1, "cadena")
 
 bool_value6 = tuple1 is tuple2
 bool_value7 = tuple1 is not tuple2
+pass

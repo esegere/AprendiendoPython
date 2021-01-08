@@ -9,17 +9,17 @@ def crear_saludo(nombre):
     return f"hola {nombre}"
 
 
-def saludar(nombre):
+def saludar_a(nombre):
     print(crear_saludo(nombre))
 
 
 def saludar_a_todos():
-    saludar("a todos")
+    saludar_a("a todos")
 
 
 def main():
     saludar_a_todos()
-    saludar("jessy")
+    saludar_a("jessy")
 
 
 # es común crear la función main solo por organización
