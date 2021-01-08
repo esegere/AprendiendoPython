@@ -1,24 +1,25 @@
 # AprendiendoPython
-repositorio para precticas de python basico y colaboracion con git
 
-## temas vistos
-- tipos de datos
+Repositorio para prácticas de python básico y colaboración con git
 
 ## temas documentados
-- tipos de datos
-- colecciones
-- operadores
-- condicionales
-- ciclos
-- funciones
 
-## temas faltantes
+- [x] tipos de datos
+- [ ] colecciones
+- [ ] operadores
+- [ ] condicionales
+- [ ] ciclos
+- [ ] funciones
+
+## temas no documentados
 - objetos
   - clases
   - métodos
   - métodos especiales
-  - herencia
+  - atributos y propiedades
+  - herencia y polimorfismo
 - excepciones
 - módulos
+- decoradores
 - generadores
 - compresiones

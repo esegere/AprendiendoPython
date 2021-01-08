@@ -42,4 +42,3 @@ else:
 
 variable = "primer valor" if condition else "segundo valor"
 print(variable)
-pass

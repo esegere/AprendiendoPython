@@ -35,4 +35,8 @@ var3 = range(2, 12, 2)  # 2,4,6,8,10
 
 for i in range(number):
     print(list_numbers[i])
-pass
+
+# además este ciclo también puede recorrer los caracteres de un 'string'
+
+for character in "esto es una cadena de texto":
+    print(character)
