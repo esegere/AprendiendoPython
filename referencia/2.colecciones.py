@@ -29,12 +29,12 @@ list_ints.append(2222)
 list_ints.insert(2, 890)
 # remove: si el elemento indicado existe en la lista, se elimina
 list_ints.remove(112)
-# clear: elimina todos los elementos (vacía la lista)
-list_ints.clear()
 # sort: ordena la lista de forma ascendente
 list_ints.sort()
 # index: busca un valor dentro d ela lista y devuelve su posición, si no lo encuentra devuelve -1
 list_ints.index(13)
+# clear: elimina todos los elementos (vacía la lista)
+list_ints.clear()
 
 # tupla
 # las tuplas son colecciones de elementos inmutables
