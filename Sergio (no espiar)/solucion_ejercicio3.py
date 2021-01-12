@@ -46,37 +46,30 @@ Fin de la votación los resultados del conteo son...
 if __name__ == '__main__':
     print(MENSAJE_REGISTRO)
     # código para registrar candidatos en esta sección
-    nombre = None
-    dic_candidatos = {}
-    while nombre != "alto":
-        nombre = input("Canditado: ")
-        if nombre != "alto" and nombre != "":
-            dic_candidatos[nombre] = 0
+    candidatos = {}
+    while True:
+        nuevo_nombre = input("nombre del candidato: ")
+        if nuevo_nombre == "alto":
+            break
+        candidatos[nuevo_nombre] = 0
     # fin de registro de candidatos
-
     print(MENSAJE_VOTACION)
     # código para votar en esta sección
-    voto = None
-    print(dic_candidatos.keys())
-    while voto != "alto":
-        voto = input("Candidato: ")
-        if voto in dic_candidatos.keys():
-            dic_candidatos[voto] += 1
-        elif voto == "alto":
+    for nombre in candidatos.keys():
+        print(nombre)
+    while True:
+        voto = input("por quien desea votar?: ")
+        if voto == "alto":
             break
+        if voto in candidatos.keys():
+            candidatos[voto] += 1
         else:
-            print("Caldidato no registrado")
+            print("candidato no registrado")
     # fin de votación
     print(MENSAJE_CONTEO)
     # código para conteo en esta sección
-    can_ganador = None
-    sort_dic = list(dic_candidatos.values())
-    sort_dic.sort()
-    max_votos = sort_dic[len(sort_dic) - 1]
-    for rec_candidatos in dic_candidatos.keys():
-        if max_votos == dic_candidatos[rec_candidatos]:
-            can_ganador = rec_candidatos
-    print(f'El ganador es: {can_ganador} con {max_votos} votos.')
+    ganador, votos = next(
+        (key, value) for key, value in candidatos.items() if value == max(candidatos.values())
+    )
+    print(f"el ganador es {ganador} con {votos} votos")
     # fin de conteo
-
-# yeii, bien hecho, te amo mi vida hermosa
