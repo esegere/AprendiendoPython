@@ -46,13 +46,35 @@ Fin de la votación los resultados del conteo son...
 if __name__ == '__main__':
     print(MENSAJE_REGISTRO)
     # código para registrar candidatos en esta sección
-
+    nombre = None
+    dic_candidatos = {}
+    while nombre != "alto":
+        nombre = input("Canditado: ")
+        if nombre != "alto" and nombre != "":
+            dic_candidatos[nombre] = 0
     # fin de registro de candidatos
+
     print(MENSAJE_VOTACION)
     # código para votar en esta sección
-
+    voto = None
+    print(dic_candidatos.keys())
+    while voto != "alto":
+        voto = input("Candidato: ")
+        if voto in dic_candidatos.keys():
+            dic_candidatos[voto] += 1
+        elif voto == "alto":
+            break
+        else:
+            print("Caldidato no registrado")
     # fin de votación
     print(MENSAJE_CONTEO)
     # código para conteo en esta sección
-
+    can_ganador = None
+    sort_dic = list(dic_candidatos.values())
+    sort_dic.sort()
+    max_votos = sort_dic[len(sort_dic) - 1]
+    for rec_candidatos in dic_candidatos.keys():
+        if max_votos == dic_candidatos[rec_candidatos]:
+            can_ganador = rec_candidatos
+    print(f'El ganador es: {can_ganador} con {max_votos} votos.')
     # fin de conteo
