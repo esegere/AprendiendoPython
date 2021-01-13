@@ -18,6 +18,7 @@
 #   de la siguiente forma "el ganador es: NOMBRE con VOTOS votos"
 #
 # NOTA: no modificar ninguna parte del código existente, solo agregar las funcionalidades
+ALTO = "Alto"
 
 MENSAJE_REGISTRO = """
                   .----------.
@@ -48,8 +49,8 @@ if __name__ == '__main__':
     # código para registrar candidatos en esta sección
     candidatos = {}
     while True:
-        nuevo_nombre = input("nombre del candidato: ")
-        if nuevo_nombre == "alto":
+        nuevo_nombre = input("nombre del candidato: ").capitalize().strip(" ")
+        if nuevo_nombre == ALTO:
             break
         candidatos[nuevo_nombre] = 0
     # fin de registro de candidatos
@@ -58,8 +59,8 @@ if __name__ == '__main__':
     for nombre in candidatos.keys():
         print(nombre)
     while True:
-        voto = input("por quien desea votar?: ")
-        if voto == "alto":
+        voto = input("por quien desea votar?: ").capitalize().strip(" ")
+        if voto == ALTO:
             break
         if voto in candidatos.keys():
             candidatos[voto] += 1
