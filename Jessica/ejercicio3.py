@@ -44,28 +44,31 @@ Fin de la votación los resultados del conteo son...
 """
 
 if __name__ == '__main__':
+    ALTO = "Alto"
     print(MENSAJE_REGISTRO)
     # código para registrar candidatos en esta sección
     nombre = None
     dic_candidatos = {}
-    while nombre != "alto":
-        nombre = input("Canditado: ")
-        if nombre != "alto" and nombre != "":
+    while nombre != ALTO:
+        nombre = input("Canditado: ").capitalize().strip(" ")
+        if nombre != ALTO and nombre != "":
             dic_candidatos[nombre] = 0
     # fin de registro de candidatos
 
     print(MENSAJE_VOTACION)
     # código para votar en esta sección
+    for nom_candidatos in dic_candidatos:
+        print(f'\t - {nom_candidatos}')
     voto = None
-    print(dic_candidatos.keys())
-    while voto != "alto":
-        voto = input("Candidato: ")
+    print("\n")
+    while voto != ALTO:
+        voto = input("Candidato: ").capitalize().strip(" ")
         if voto in dic_candidatos.keys():
             dic_candidatos[voto] += 1
-        elif voto == "alto":
+        elif voto == ALTO:
             break
         else:
-            print("Caldidato no registrado")
+            print("Candidato no registrado")
     # fin de votación
     print(MENSAJE_CONTEO)
     # código para conteo en esta sección
