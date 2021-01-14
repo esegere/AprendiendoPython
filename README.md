@@ -5,21 +5,21 @@ Repositorio para prácticas de python básico y colaboración con git
 ## temas documentados
 
 - [x] tipos de datos
-- [ ] colecciones
-- [ ] operadores
-- [ ] condicionales
-- [ ] ciclos
-- [ ] funciones
+- [x] colecciones
+- [x] operadores
+- [x] condicionales
+- [x] ciclos
+- [x] funciones
+- [ ] objetos
 
 ## temas no documentados
-- objetos
-  - clases
-  - métodos
-  - métodos especiales
-  - atributos y propiedades
-  - herencia y polimorfismo
+- cast
 - excepciones
 - módulos
 - decoradores
 - generadores
 - compresiones
+- bloques "with"
+- lambdas
+- kwargs
+- funciones integradas útiles

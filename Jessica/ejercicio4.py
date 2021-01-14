@@ -28,6 +28,7 @@ MENU = f'''
         4) Salir del programa
 '''
 
+
 # fin de la zona de definición de menú
 # defina aquí sus funciones
 def sumar_todos(*numeros):
@@ -36,18 +37,22 @@ def sumar_todos(*numeros):
         resultado += numero
     return resultado
 
+
 def multiplicar_todos(*numeros):
     resultado = 1
     for numero in numeros:
         resultado *= numero
     return resultado
 
+
 def imprimir_todos(*numeros):
     for numero in numeros:
         print(numero)
 
+
 def imprimir_error():
     print("\n Opcion no valida")
+
 
 # fin de la zona de definición de funciones
 # no modificar la siguiente sección del programa
