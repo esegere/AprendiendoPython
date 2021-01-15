@@ -13,6 +13,7 @@ Repositorio para prácticas de python básico y colaboración con git
 - [ ] objetos
 
 ## temas no documentados
+
 - cast
 - excepciones
 - módulos
@@ -23,3 +24,4 @@ Repositorio para prácticas de python básico y colaboración con git
 - lambdas
 - kwargs
 - funciones integradas útiles
+
