@@ -17,6 +17,7 @@ Repositorio para prácticas de python básico y colaboración con git
 - cast
 - excepciones
 - módulos
+- slices
 - decoradores
 - generadores
 - compresiones
@@ -24,4 +25,3 @@ Repositorio para prácticas de python básico y colaboración con git
 - lambdas
 - kwargs
 - funciones integradas útiles
-
