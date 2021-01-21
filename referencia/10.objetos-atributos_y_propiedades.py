@@ -34,6 +34,7 @@ class ExampleClass:
     # el nombre del método sera el nombre de la propiedad
     @property
     def atributo_mas_privado(self):
+        print("regresando valor")
         return self.__atributo_mas_privado
 
     # propiedad (setter)
@@ -41,7 +42,10 @@ class ExampleClass:
     # el método debe llamarse exactamente igual que la propiedad
     @atributo_mas_privado.setter
     def atributo_mas_privado(self, valor):
+        if valor > 5:
+            valor = 5
         self.__atributo_mas_privado = valor
+        print("valor cambiado")
 
 
 if __name__ == '__main__':
@@ -53,3 +57,4 @@ if __name__ == '__main__':
     # y los getters y setters de propiedades se pueden llamar como cualquier atributo
     print(new_objeto.atributo_mas_privado)
     new_objeto.atributo_mas_privado = 10
+    print(new_objeto.atributo_mas_privado)

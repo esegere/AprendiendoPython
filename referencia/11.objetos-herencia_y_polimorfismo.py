@@ -35,8 +35,23 @@ class Derived(Base):
 # el polimorfismo en Python es tan simple como usar el método, o atributo de una clase sin importar de que tipo sea
 # mientras lo tenga podremos llamarlo
 
+class OtraClase:
+
+    def hacer_algo(self):
+        print("haciendo algo en otro lado")
+
+
+def hacerle_algo_al_objeto(objeto):
+    objeto.hacer_algo()
+
+
 if __name__ == '__main__':
     objeto1 = Base()
     objeto2 = Derived()
-    objeto1.hacer_algo()
-    objeto2.hacer_algo()
+    objeto3 = OtraClase()
+    hacerle_algo_al_objeto(objeto1)
+    hacerle_algo_al_objeto(objeto2)
+    hacerle_algo_al_objeto(objeto3)
+
+    # objeto1.hacer_algo()
+    # objeto2.hacer_algo()
