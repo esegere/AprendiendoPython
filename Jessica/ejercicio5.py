@@ -67,12 +67,12 @@ def eliminar_contacto(agenda_telefonica):
     nombre = input("Nombre: ").capitalize()
     if nombre in agenda_telefonica.keys():
         del agenda_telefonica[nombre]
-        print(f'\n{nombre} persona fue eliminada')
+        print(f'\n{nombre} fue eliminada')
     else:
         mensaje_error(nombre)
 
 
-def modificar_contacto(agenda_telefonica):
+def modificar_contacto(agenda_telef2onica):
     nombre = input("Nombre: ").capitalize()
     if nombre in agenda_telefonica.keys():
         numero_aterior = agenda_telefonica[nombre]
