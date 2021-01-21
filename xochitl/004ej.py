@@ -19,11 +19,39 @@
 # "imprimir_error"
 #       No regresa nada
 #
-# defina aquí el mensaje donde se muestran las opciones (Menu de opciones)
-MENU =
+# defina aquí el mensaje donde se muestran las opciones (Menu de opciones)}
+
+MENU = """
+  MENU DE OPCIONES
+  1.- SUMAR
+  2.- MULTIPLICAR
+  3.- QUIERE SUPRIMIR TODOS
+  4.-QUIERE SALIR DEL PROGRAMA
+    
+"""
 
 # fin de la zona de definición de menú
 # defina aquí sus funciones
+
+
+def sumar_todos(*numeros):
+    resultado=0
+    for numero in numeros:
+        resultado += numero
+    return resultado
+def multiplicar_todos(*numeros):
+    resultado=1
+    for numero in numeros:
+        resultado *= numero
+    return resultado
+def imprimir_todos(*numeros):
+    for numero in numeros:
+        print(numero)
+def imprimir_error():
+    print("Opcion no Valida")
+
+
+
 
 
 # fin de la zona de definición de funciones
@@ -33,6 +61,7 @@ if __name__ == '__main__':
     number_list = tuple(
         float(number)
         for number in input("ingrese una lista de números separados por coma: ").strip(" ").split(",")
+
     )
     while True:
         print(MENU)

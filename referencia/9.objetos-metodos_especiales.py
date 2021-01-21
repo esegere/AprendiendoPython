@@ -47,3 +47,10 @@ class ExampleClass:
         return f"mi numero es: {self.numero}"
 
     # y muchos mas, uno para cada operador y también palabras claves
+
+
+if __name__ == '__main__':
+    obj = ExampleClass()
+    var = obj + 2
+    print(var)
+    print(obj)
