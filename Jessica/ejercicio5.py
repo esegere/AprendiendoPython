@@ -35,3 +35,75 @@
 #   PISTA: como es costumbre mia, la colección predilecta para este ejercicio es el diccionario
 #   NOTA: para que las funciones puedan usar el diccionario de la agenda, pasarlo por parámetro
 #   PETICIÓN: para facilitar la estructura del código crear funciones, no hay limite, el criterio es suyo
+
+MENU = '''
+    OPCIONES:
+        1) Consultar número de contacto
+        2) Agregar contacto
+        3) Eliminar contacto
+        4) Modificar número de contacto
+        5) Salir
+'''
+
+agenda_telefonica = {}
+
+
+def buscar_contacto(agenda_telefonica):
+    contacto = input("Nombre: ").capitalize()
+    if contacto in agenda_telefonica.keys():
+        numero = agenda_telefonica[contacto]
+        print(f'\nEl numero de {contacto} es {numero}.')
+    else:
+        mensaje_error(contacto)
+
+
+def pedir_datos(agenda_telefonica):
+    nombre = input("Nombre: ").capitalize()
+    numero = input("Numero: ")
+    agenda_telefonica[nombre] = numero
+
+
+def eliminar_contacto(agenda_telefonica):
+    nombre = input("Nombre: ").capitalize()
+    if nombre in agenda_telefonica.keys():
+        del agenda_telefonica[nombre]
+        print(f'\n{nombre} persona fue eliminada')
+    else:
+        mensaje_error(nombre)
+
+
+def modificar_contacto(agenda_telefonica):
+    nombre = input("Nombre: ").capitalize()
+    if nombre in agenda_telefonica.keys():
+        numero_aterior = agenda_telefonica[nombre]
+        numero_nuevo = input("Nuevo numero: ")
+        agenda_telefonica[nombre] = numero_nuevo
+        print(f"\nnumero de {nombre} ha sido cambiado de {numero_aterior} a {numero_nuevo}")
+    else:
+        mensaje_error(nombre)
+
+
+def mensaje_error(nombre_contacto):
+    print(f"\n{nombre_contacto} no esta registrada en tu agenda")
+
+
+def imprimir_error():
+    print("\nOpcion no valida")
+
+
+if __name__ == '__main__':
+    while True:
+        print(MENU)
+        opcion = input("Opcion: ")
+        if opcion == "1":
+            buscar_contacto(agenda_telefonica)
+        elif opcion == "2":
+            pedir_datos(agenda_telefonica)
+        elif opcion == "3":
+            eliminar_contacto(agenda_telefonica)
+        elif opcion == "4":
+            modificar_contacto(agenda_telefonica)
+        elif opcion == "5":
+            break
+        else:
+            imprimir_error()
