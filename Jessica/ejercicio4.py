@@ -20,7 +20,7 @@
 #       No regresa nada
 #
 # defina aquí el mensaje donde se muestran las opciones (Menu de opciones)
-MENU = f'''
+MENU = '''
     OPCIONES:
         1) Sumarlo todo
         2) Multiplicarlo todo
