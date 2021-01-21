@@ -58,7 +58,7 @@ que ocupa varias lineas
 
 string_f = f'''cadena f-string
 puede interpolar
-bool: {bool_true}
+bool: {bool_true}      ""
 int: {int_negative}
 float: {float_scientific}
 otras strings: {string_simple}
