@@ -10,7 +10,7 @@ Repositorio para prácticas de python básico y colaboración con git
 - [x] condicionales
 - [x] ciclos
 - [x] funciones
-- [ ] objetos
+- [x] objetos
 
 ## temas no documentados
 
