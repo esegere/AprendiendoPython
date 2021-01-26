@@ -11,17 +11,18 @@ Repositorio para prácticas de python básico y colaboración con git
 - [x] ciclos
 - [x] funciones
 - [x] objetos
+- [x] cast
+- [ ] excepciones
+- [ ] módulos
 
 ## temas no documentados
 
-- cast
-- excepciones
-- módulos
 - slices
+- funciones de alto orden
+- lambdas
 - decoradores
 - generadores
 - compresiones
 - bloques "with"
-- lambdas
 - kwargs
 - funciones integradas útiles
