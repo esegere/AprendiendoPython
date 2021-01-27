@@ -54,10 +54,8 @@ class Alumno:
         return resultado
 
     def tiene_excelencia(self):
-        if self.promedio > 7.9:
-            return True
-        else:
-            return False
+        return self.promedio > 7.9
+
 
 
 MENU = '''
@@ -114,11 +112,13 @@ if __name__ == '__main__':
         if opcion == "1":
             agregar_alumno(lista_de_alumnos)
         elif opcion == "2":
-            print(f"\nPromedio general del grupo: {calcular_promedio_grupal(lista_de_alumnos):.2f}")
+            print(f"\nPromedio general del grupo: "
+                  f"{calcular_promedio_grupal(lista_de_alumnos):.2f}")
         elif opcion == "3":
             consultar_promedios(lista_de_alumnos)
         elif opcion == "4":
-            print(f'\nLa cantidad de alumnos con excelencia es: {consultar_excelencia(lista_de_alumnos)}')
+            print(f'\nLa cantidad de alumnos con excelencia es: '
+                  f'{consultar_excelencia(lista_de_alumnos)}')
         elif opcion == "5":
             break
         else:
