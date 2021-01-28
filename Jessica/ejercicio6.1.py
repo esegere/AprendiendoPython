@@ -64,10 +64,14 @@ def imprimir_error():
 
 
 if __name__ == '__main__':
-    number_list = tuple(
-        int(number)
-        for number in input("ingrese una lista de números separados por coma: ").strip(" ").split(",")
-    )
+    try:
+        number_list = tuple(
+            int(number)
+            for number in input("ingrese una lista de números separados por coma: ").strip(" ").split(",")
+        )
+    except ValueError:
+        print("los elementos que ingresaste no contienen unicamente numeros")
+        exit()
     while True:
         print(MENU)
         option = input("Ingrese una opción: ")

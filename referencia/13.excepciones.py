@@ -3,17 +3,31 @@
 # las excepciones son causadas por comportamientos inesperados en el programa
 # de los cuales el programa mismo no se puede recuperar por si mismo si no se le ha programado para ello
 
-def numeric_fail():
-    return 500 / 0
+def numeric_fail(numero):
+    resultado = 0
+    try:
+        resultado = 500 / numero
+    except ZeroDivisionError:
+        resultado = 0
+    else:
+        print("todo salio bien")
+    finally:
+        return resultado
 
 
 def cast_fail():
-    return int('palabras')
+    try:
+        return int('palabras')
+    except ValueError:
+        return 1
 
 
 def access_fail():
     lista = [1, 2, 3]
-    return lista[8]
+    try:
+        return lista[8]
+    except IndexError:
+        return 0
 
 
 # para controlar las excepciones tenemos las estructuras:
@@ -32,6 +46,6 @@ def access_fail():
 # independientemente de si hubo o no una excepción, normalmente se suelen liberar recursos
 
 if __name__ == '__main__':
-    numeric_fail()
-    cast_fail()
     access_fail()
+    cast_fail()
+    numeric_fail(0)
