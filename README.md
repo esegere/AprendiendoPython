@@ -12,7 +12,7 @@ Repositorio para prácticas de python básico y colaboración con git
 - [x] funciones
 - [x] objetos
 - [x] cast
-- [ ] excepciones
+- [x] excepciones
 - [ ] módulos
 
 ## temas no documentados
