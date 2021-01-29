@@ -25,17 +25,17 @@ def es_par(numero):
         return False
 
 
-def calcular_numeros_pares(*number_list):
+def calcular_numeros_pares(*numeros):
     lista_pares = []
-    for numero in number_list:
+    for numero in numeros:
         if es_par(numero):
             lista_pares.append(numero)
     return lista_pares
 
 
-def calcular_numeros_impares(*number_list):
+def calcular_numeros_impares(*numeros):
     lista_impares = []
-    for numero in number_list:
+    for numero in numeros:
         if not es_par(numero):
             lista_impares.append(numero)
     return lista_impares
@@ -50,6 +50,7 @@ def es_primo(numero):
         return True
     else:
         return False
+
 
 def calcular_numeros_primos(*number_lis):
     lista_primos = []
