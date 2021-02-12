@@ -21,8 +21,9 @@ Repositorio para prácticas de python básico y colaboración con git
 
 ## temas no documentados
 
+- kwargs
 - generadores
 - compresiones
+- archivos
 - bloques "with"
-- kwargs
-- funciones integradas útiles
+- PIP
