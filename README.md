@@ -13,14 +13,14 @@ Repositorio para prácticas de python básico y colaboración con git
 - [x] objetos
 - [x] cast
 - [x] excepciones
-- [ ] módulos
+- [x] módulos
+- [ ] slices
+- [ ] funciones de alto orden
+- [ ] lambdas
+- [ ] decoradores
 
 ## temas no documentados
 
-- slices
-- funciones de alto orden
-- lambdas
-- decoradores
 - generadores
 - compresiones
 - bloques "with"
