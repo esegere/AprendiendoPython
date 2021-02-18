@@ -10,18 +10,20 @@ Repositorio para prácticas de python básico y colaboración con git
 - [x] condicionales
 - [x] ciclos
 - [x] funciones
-- [ ] objetos
+- [x] objetos
+- [x] cast
+- [x] excepciones
+- [x] módulos
+- [ ] slices
+- [ ] funciones de alto orden
+- [ ] lambdas
+- [ ] decoradores
+- [ ] kwargs
+- [ ] generadores
+- [ ] compresiones
+- [ ] archivos
 
 ## temas no documentados
 
-- cast
-- excepciones
-- módulos
-- slices
-- decoradores
-- generadores
-- compresiones
 - bloques "with"
-- lambdas
-- kwargs
-- funciones integradas útiles
+- PIP

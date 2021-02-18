@@ -29,3 +29,97 @@
 #   - un método tiene_excelencia()  para saber si el alumno es de excelencia
 #
 # guardar los alumnos en una lista
+
+
+class Alumno:
+    def __init__(self,
+                 nombre_alumno,
+                 calificacion_primer_parcial,
+                 calificacion_segundo_parcial,
+                 calificacion_tercer_parcial):
+        self._nombre_alumno = nombre_alumno
+        self.calificacion_primer_parcial = calificacion_primer_parcial
+        self.calificacion_segundo_parcial = calificacion_segundo_parcial
+        self.calificacion_tercer_parcial = calificacion_tercer_parcial
+
+    @property
+    def nombre_alumno(self):
+        return self._nombre_alumno
+
+    @property
+    def promedio(self):
+        resultado = (self.calificacion_primer_parcial
+                     + self.calificacion_segundo_parcial
+                     + self.calificacion_tercer_parcial) / 3
+        return resultado
+
+    def tiene_excelencia(self):
+        return self.promedio > 7.9
+
+
+
+MENU = '''
+    OPCIONES:
+        1. Agregar alumno
+        2. Consultar promedio grupal
+        3. Consultar promedio de cada alumno
+        4. Consulta de excelencia
+        5. Salir
+'''
+lista_de_alumnos = []
+
+
+def agregar_alumno(lista_de_alumnos):
+    nombre_alumno = input("\nNombre del Alumno: ")
+    calificacion_primer_parcial = float(input("Calificacion del primer parcial: "))
+    calificacion_segundo_parcial = float(input("Calificacion del segundo parcial: "))
+    calificacion_tercer_parcial = float(input("Calificacion del tercer parcial: "))
+    nuevo_alumno = Alumno(nombre_alumno,
+                          calificacion_primer_parcial,
+                          calificacion_segundo_parcial,
+                          calificacion_tercer_parcial)
+    lista_de_alumnos.append(nuevo_alumno)
+
+
+def calcular_promedio_grupal(lista_de_alumnos):
+    promedios = 0
+    for alumno in lista_de_alumnos:
+        promedios += alumno.promedio
+    return promedios / len(lista_de_alumnos)
+
+
+def consultar_promedios(lista_de_alumnos):
+    for datos in lista_de_alumnos:
+        print(f'\nNombre: {datos.nombre_alumno} Promedio: {datos.promedio:.2f}')
+
+
+def consultar_excelencia(lista_de_alumnos):
+    excelencia = 0
+    for alumno in lista_de_alumnos:
+        if alumno.tiene_excelencia():
+            excelencia += 1
+    return excelencia
+
+
+def imprimir_error():
+    print("\nOpcion no valida")
+
+
+if __name__ == '__main__':
+    while True:
+        print(MENU)
+        opcion = input("Opcion: ")
+        if opcion == "1":
+            agregar_alumno(lista_de_alumnos)
+        elif opcion == "2":
+            print(f"\nPromedio general del grupo: "
+                  f"{calcular_promedio_grupal(lista_de_alumnos):.2f}")
+        elif opcion == "3":
+            consultar_promedios(lista_de_alumnos)
+        elif opcion == "4":
+            print(f'\nLa cantidad de alumnos con excelencia es: '
+                  f'{consultar_excelencia(lista_de_alumnos)}')
+        elif opcion == "5":
+            break
+        else:
+            imprimir_error()
