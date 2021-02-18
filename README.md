@@ -18,12 +18,12 @@ Repositorio para prácticas de python básico y colaboración con git
 - [ ] funciones de alto orden
 - [ ] lambdas
 - [ ] decoradores
+- [ ] kwargs
+- [ ] generadores
+- [ ] compresiones
+- [ ] archivos
 
 ## temas no documentados
 
-- kwargs
-- generadores
-- compresiones
-- archivos
 - bloques "with"
 - PIP
