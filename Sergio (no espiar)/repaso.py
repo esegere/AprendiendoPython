@@ -28,10 +28,9 @@ class Clase:
     def get_nombre(self):
         return "mi nombre"
 
+
 if __name__ == '__main__':
     funcion(5)
     objeto = Clase()
-    valor_5 = objeto.atributo # el operador punto, accede a los métodos o atributos de un objeto
-    nombre = objeto.get_nombre() # método, se llama igual que llamar a una función
-
-
+    valor_5 = objeto.atributo  # el operador punto, accede a los métodos o atributos de un objeto
+    nombre = objeto.get_nombre()  # método, se llama igual que llamar a una función
