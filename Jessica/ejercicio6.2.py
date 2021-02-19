@@ -51,11 +51,12 @@ def pedir_dimension(direccion):
 
 
 def imprimir_forma(caracter, ancho, alto):
-    print(caracter * ancho)
+    for i in range(alto):
+        print(caracter * ancho)
 
 
 if __name__ == '__main__':
-    pedir_caracter()
-    pedir_dimension("ancho")
-    pedir_dimension("alto")
-    print(imprimir_forma())
+    caracter = pedir_caracter()
+    ancho = pedir_dimension("ancho")
+    alto = pedir_dimension("alto")
+    imprimir_forma(caracter, ancho, alto)
