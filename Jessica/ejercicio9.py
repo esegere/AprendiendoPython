@@ -4,3 +4,4 @@
 # para poder hacer las operaciones
 #
 # De la misma forma, usaremos decoradores para saber en que momento llamar las funciones
+# estos decoradores se encuentran en la clase FunctionHandler del modulo utilidades.cli
