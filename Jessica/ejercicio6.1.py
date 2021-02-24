@@ -13,7 +13,7 @@ MENU = '''
     OPCIONES:
         1) Imprimir números pares
         2) Imprimir números impares
-        3) Imprimir números primos  
+        3) Imprimir números primos 
         4) Salira
 '''
 
